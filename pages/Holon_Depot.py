@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px 
 
 
-paths =  ["V37_PLE-TR-G12-HLD.csv","V38_PLE-TR-G12-HLD.csv","V41_PLE-TR-G12-HLD.csv","V43_PLE-TR-G12-HLD.csv","V44_PLE-TR-G12-HLD.csv","V46_PLE-TR-G12-HLD.csv"]
+paths =  ["V34_PLE-TR-G12-HLD.csv","V37_PLE-TR-G12-HLD.csv","V38_PLE-TR-G12-HLD.csv","V41_PLE-TR-G12-HLD.csv","V43_PLE-TR-G12-HLD.csv","V44_PLE-TR-G12-HLD.csv","V46_PLE-TR-G12-HLD.csv"]
 
 all_df =  pd.DataFrame()
 
