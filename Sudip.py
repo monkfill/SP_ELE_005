@@ -5,18 +5,49 @@ import plotly.express as px
 import snowflake.connector
 import streamlit_option_menu
 from streamlit_option_menu import option_menu
+from urllib.request import urlopen
+
 import os
 
-
-with st.sidebar:
-    selected = option_menu(
-    menu_title = "Main Menu",
-    options = ["Home","Warehouse","Query Optimization and Processing","Storage","Contact Us"],
-    icons = ["house","gear","activity","snowflake","envelope"],
-    menu_icon = "cast",
-    default_index = 0,
-    #orientation = "horizontal",
+st.set_page_config(
+    page_title="Project_Details_ELE0005",
+    # page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
 )
+
+
+chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+
+st.area_chart(chart_data)
+
+
+
+# with st.sidebar:
+#     selected = option_menu(
+#     menu_title = "Main Menu",
+#     options = ["Holod Depot"],
+#     # options = ["Homee","Warehouse","Query Optimization and Processing","Storage","Contact Us"],
+#     # icons = ["house","gear","activity","snowflake","envelope"],
+#     # menu_icon = "cast",
+#     # default_index = 0,
+#     #orientation = "horizontal",
+# )
+
+
+
+
+# with st.sidebar:
+#     selected = option_menu('SimiLo', ["Intro", 'Search','About'], 
+#         icons=['play-btn','search','info-circle'],menu_icon='intersect', default_index=0)
+#     lottie = load_lottiefile("similo3.json")
+#     st_lottie(lottie,key='loc')
+
 
 
 # # Define the folder path where your CSV files are located
