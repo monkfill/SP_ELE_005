@@ -1,21 +1,14 @@
 import streamlit as st 
+import pandas as pd 
 
-st.header(" Holon Depot ")
+paths =  ["V40_PLE-TR-G12-HLD.csv","V41_PLE-TR-G12-HLD.csv","V43_PLE-TR-G12-HLD.csv","V44_PLE-TR-G12-HLD.csv","V46_PLE-TR-G12-HLD.csv"]
 
-st.subheader(":building_construction: SP01_ID_OFFICE_2024")
+all_df =  pd.DataFrame()
 
-cl1,cl2 = st.columns((2))
+for path in paths:
+    df  =  pd.read_csv(path)
 
+    all_df = pd.concat( [ all_df,df])
 
-# with cl2:
-#     # st.image("/Users/apple/Desktop/untitled folder/fotor-ai-20240207162856.jpg", width=400, caption="SP[]_Tower03")
-     
-with cl1: 
-    st.markdown(''':wrench: **Scope Of Work :** <p style='color: #00FFFF;'>   <em> Wall, Floor, Room, Coloumn,Beam,Door,Window,Stair</p>''', unsafe_allow_html=True) 
-    st.markdown(''':male-office-worker: **Users :**  <p style='color: #00FFFF;'> <em>User_ A, User_ B, User_ C, User_ D, User_ E,User_ F, User_ G, User_ H, User_ I, User_ J, User_ K</p>''',unsafe_allow_html= True)
-    st.markdown("**Star Date :**   Nov3,2023")
-    st.markdown("**Planned End Date :**   Feb3,2024")
-st.divider()
-
-st.subheader(''' :sky[Select Start & End Date For Categorty Wise Data]''')
+st.write(all_df)
 
