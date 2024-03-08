@@ -1,6 +1,23 @@
 import streamlit as st 
 import pandas as pd
+import numpy as np
+import plotly.express as px 
+import snowflake.connector
+import streamlit_option_menu
+from streamlit_option_menu import option_menu
 import os
+
+
+with st.sidebar:
+    selected = option_menu(
+    menu_title = "Main Menu",
+    options = ["Home","Warehouse","Query Optimization and Processing","Storage","Contact Us"],
+    icons = ["house","gear","activity","snowflake","envelope"],
+    menu_icon = "cast",
+    default_index = 0,
+    #orientation = "horizontal",
+)
+
 
 # # Define the folder path where your CSV files are located
 # folder_path = "SP_ELE_005/dataset/Holon"

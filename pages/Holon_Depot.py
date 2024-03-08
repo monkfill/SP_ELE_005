@@ -1,6 +1,30 @@
 import streamlit as st 
 import pandas as pd 
+import numpy as np
 import plotly.express as px 
+import snowflake.connector
+import streamlit_option_menu
+from streamlit_option_menu import option_menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 paths =  ["V34_PLE-TR-G12-HLD.csv","V37_PLE-TR-G12-HLD.csv","V38_PLE-TR-G12-HLD.csv","V41_PLE-TR-G12-HLD.csv","V43_PLE-TR-G12-HLD.csv","V44_PLE-TR-G12-HLD.csv","V46_PLE-TR-G12-HLD.csv"]
